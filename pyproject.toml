@@ -39,6 +39,17 @@ bedrockcache = "bedrockcache.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/bedrockcache"]
 
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/bedrockcache",
+    "tests",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "pyproject.toml",
+    ".github/workflows",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra -q"

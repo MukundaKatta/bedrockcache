@@ -76,6 +76,14 @@ $ echo $?
 - Not a replacement for Phoenix or Langfuse.
 - Not coupled to any framework — zero runtime dependencies.
 
+## Sibling libraries
+
+Three independent libraries that compose around Anthropic-on-Bedrock:
+
+- **bedrockcache** (this) — static auditor for prompt caching.
+- [**bedrockstack**](https://github.com/MukundaKatta/bedrockstack) — Bedrock-aware retry policy, cost ledger, streaming-error normalization.
+- [**ragvitals**](https://github.com/MukundaKatta/ragvitals) — 5-dim drift detection for the RAG pipelines these models live inside.
+
 ## Roadmap
 
 - v0.2: real Anthropic tokenizer in place of the char-based heuristic.

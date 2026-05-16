@@ -18,6 +18,16 @@ A real Bedrock+LiteLLM stack ran up [$37,901 in 9 days](https://news.ycombinator
 pip install bedrockcache
 ```
 
+Other channels:
+
+```bash
+# Homebrew (macOS, Linux)
+brew install MukundaKatta/tap/bedrockcache
+
+# Docker (multi-arch: linux/amd64, linux/arm64)
+docker pull ghcr.io/mukundakatta/bedrockcache:latest
+```
+
 ## Audit a request before sending
 
 ```python
@@ -56,6 +66,13 @@ recommendations:
   - add `cache_control={'type': 'ephemeral'}` either on the message dict or on the last content sub-item of stable prefixes.
 $ echo $?
 1
+```
+
+Same CLI via Docker (handy for CI on machines without Python):
+
+```bash
+echo '{"model":"bedrock/anthropic.claude-sonnet-4-5-v1:0","messages":[{"role":"user","content":"hi"}]}' \
+  | docker run --rm -i ghcr.io/mukundakatta/bedrockcache:latest audit - --backend litellm --strict
 ```
 
 ## Supported backends

@@ -101,6 +101,8 @@ Three independent libraries that compose around Anthropic-on-Bedrock:
 - [**bedrockstack**](https://github.com/MukundaKatta/bedrockstack) — Bedrock-aware retry policy, cost ledger, streaming-error normalization.
 - [**ragvitals**](https://github.com/MukundaKatta/ragvitals) — 5-dim drift detection for the RAG pipelines these models live inside.
 
+Landing repo with a runnable 50-line example wiring all three together: **[bedrock-production-stack](https://github.com/MukundaKatta/bedrock-production-stack)**.
+
 ## Roadmap
 
 - v0.2: real Anthropic tokenizer in place of the char-based heuristic.
